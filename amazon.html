@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Product Reviews Sentiment Analysis | Nityanand Khule</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f3f4f6;
+            color: #1f2937;
+        }
+
+        header {
+            background: linear-gradient(135deg, #ff9900, #ff6a00);
+            color: white;
+            padding: 70px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        section {
+            padding: 60px 10%;
+        }
+
+        h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #111827;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            margin-bottom: 30px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #fff3e0;
+            color: #e65100;
+            padding: 8px 14px;
+            margin: 5px 5px 5px 0;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 18px;
+            background: #ff6a00;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #e65100;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        /* Screenshot Section */
+        .screenshot-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .screenshot-container img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .screenshot-container img:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #111827;
+            color: #9ca3af;
+        }
+
+        @media(max-width: 768px){
+            section{ padding:40px 6%; }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Amazon Product Reviews Sentiment Analysis</h1>
+    <p>Machine Learning & NLP Project by Nityanand Khule</p>
+</header>
+
+<section>
+    <h2>Project Overview</h2>
+    <div class="card">
+        <p>
+            This project focuses on analyzing Amazon product reviews using Natural Language Processing (NLP) 
+            techniques to classify customer sentiments as Positive, Negative, or Neutral. 
+            The goal is to extract actionable insights from textual review data 
+            and build a predictive sentiment classification model.
+        </p>
+    </div>
+</section>
+
+<section>
+    <h2>Problem Statement</h2>
+    <div class="card">
+        <p>
+            E-commerce platforms receive millions of customer reviews daily. 
+            Manually analyzing feedback is inefficient and time-consuming. 
+            This project aims to automate sentiment detection using machine learning 
+            models to help businesses understand customer satisfaction and improve products.
+        </p>
+    </div>
+</section>
+
+<section>
+    <h2>Tools & Technologies</h2>
+    <div class="card">
+        <span class="badge">Python</span>
+        <span class="badge">Pandas</span>
+        <span class="badge">NumPy</span>
+        <span class="badge">Scikit-learn</span>
+        <span class="badge">NLP</span>
+        <span class="badge">TF-IDF</span>
+        <span class="badge">Logistic Regression</span>
+        <span class="badge">Jupyter Notebook</span>
+    </div>
+</section>
+
+<section>
+    <h2>Key Analysis & Insights</h2>
+    <div class="card">
+        <ul>
+            <li>Performed text preprocessing (tokenization, stopword removal, stemming).</li>
+            <li>Converted textual data into numerical features using TF-IDF Vectorization.</li>
+            <li>Built and evaluated multiple classification models.</li>
+            <li>Achieved high accuracy in predicting customer sentiment.</li>
+            <li>Visualized sentiment distribution using charts and word clouds.</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <h2>Screenshots</h2>
+    <div class="card">
+        <p>Below are snapshots of model performance and analysis visuals:</p>
+
+        <div class="screenshot-container">
+            <img src="./assets/images/sentiment1.png" alt="Sentiment Distribution">
+            <img src="./assets/images/sentiment2.png" alt="Word Cloud Visualization">
+            <img src="./assets/images/sentiment3.png" alt="Model Accuracy Results">
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Project Links</h2>
+    <div class="card">
+        <a href="https://github.com/Nityanand-Khule-24/amazon_product_sentiment_analysis" class="btn">View GitHub Repository</a>
+        <br><br>
+        <!-- <a href="#" class="btn">View Live App</a> -->
+    </div>
+</section>
+
+<footer>
+    © 2026 Nityanand Khule | Amazon Sentiment Analysis Project
+</footer>
+
+</body>
+</html>
