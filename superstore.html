@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Store Sales Analytics & YoY Dashboard | Nityanand Khule</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        body {
+            background-color: #fcfbfa;
+        }
+    </style>
+</head>
+
+<body class="text-neutral-900 font-sans antialiased selection:bg-neutral-200">
+
+    <!-- NAVBAR -->
+    <nav class="max-w-6xl mx-auto px-6 py-8 flex justify-between items-center">
+        <a href="../index.html" class="text-xs font-bold tracking-[0.2em] uppercase text-neutral-800 hover:opacity-70 transition">
+            NITYANAND KHULE
+        </a>
+        <a href="../index.html"
+            class="group border border-neutral-200 rounded-full px-5 py-2 text-xs font-medium uppercase tracking-wider bg-white shadow-sm hover:bg-neutral-900 hover:text-white hover:border-neutral-900 transition-all duration-300">
+            <span class="inline-block transition-transform duration-300 group-hover:-translate-x-1">←</span> Back
+        </a>
+    </nav>
+
+    <!-- HERO -->
+    <header class="max-w-6xl mx-auto px-6 pt-12 pb-16">
+        <div class="inline-flex items-center gap-2 bg-neutral-100 border border-neutral-200/60 rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-neutral-500">
+            <span class="w-1.5 h-1.5 rounded-full bg-blue-600 animate-pulse"></span>
+            Project 03 / E-Commerce Retail Analytics
+        </div>
+
+        <h1 class="text-4xl md:text-6xl font-light tracking-tight text-neutral-950 mt-6 mb-8 max-w-4xl leading-[1.1]">
+            Super Store Sales <br class="hidden md:inline"><span class="font-semibold text-neutral-900">Analytics & YoY Dashboard</span>
+        </h1>
+
+        <p class="max-w-2xl text-lg text-neutral-600 font-light leading-relaxed">
+            An advanced corporate retail intelligence system processing over <strong class="font-medium text-neutral-900">1.57M in Total Sales revenue</strong>. This project tracks Year-over-Year (YoY) commercial behavior, optimizing regional logistics fulfillment times and isolating consumer distribution segment preferences.
+        </p>
+    </header>
+
+    <!-- MAIN DASHBOARD HERO PRESENTATION -->
+    <section class="max-w-6xl mx-auto px-6 pb-20">
+        <div class="relative group overflow-hidden rounded-2xl border border-neutral-200/80 bg-neutral-100 shadow-md transition-shadow hover:shadow-xl duration-500">
+            <img src="../picture/superstore.png"
+                alt="Super Store Sales Dashboard Main View"
+                class="w-full h-auto object-cover block">
+        </div>
+    </section>
+
+    <!-- TARGET HIGH-LEVEL KPI METRICS -->
+    <section class="max-w-6xl mx-auto px-6 pb-24">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+            <div class="bg-white border border-neutral-200/70 rounded-xl p-6 shadow-sm">
+                <p class="text-[10px] uppercase tracking-widest text-neutral-400 font-bold mb-1">Total Revenue</p>
+                <h3 class="text-3xl font-bold tracking-tight text-neutral-900">1.57M</h3>
+            </div>
+            <div class="bg-white border border-neutral-200/70 rounded-xl p-6 shadow-sm">
+                <p class="text-[10px] uppercase tracking-widest text-neutral-400 font-bold mb-1">Quantity Sold</p>
+                <h3 class="text-3xl font-bold tracking-tight text-neutral-900">22K</h3>
+            </div>
+            <div class="bg-white border border-neutral-200/70 rounded-xl p-6 shadow-sm">
+                <p class="text-[10px] uppercase tracking-widest text-emerald-600/80 font-bold mb-1">Net Profit</p>
+                <h3 class="text-3xl font-bold tracking-tight text-emerald-600">175.26K</h3>
+            </div>
+            <div class="bg-white border border-neutral-200/70 rounded-xl p-6 shadow-sm">
+                <p class="text-[10px] uppercase tracking-widest text-blue-600/80 font-bold mb-1">Avg Delivery</p>
+                <h3 class="text-3xl font-bold tracking-tight text-blue-600">3.93 <span class="text-xs font-light text-neutral-400">Days</span></h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECT OVERVIEW & PROBLEM STATEMENT -->
+    <section class="max-w-6xl mx-auto px-6 pb-24 border-t border-neutral-200/60 pt-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
+            <div>
+                <h2 class="text-xs uppercase tracking-[0.2em] font-bold text-neutral-400 mb-4">Project Overview</h2>
+                <p class="text-neutral-600 font-light leading-relaxed text-base">
+                    This retail analytics initiative targets data modeling workflows across a diverse consumer enterprise marketplace. By cleansing and visualizing historical shipping variables, customer segments, and distinct payment profiles inside an integrated light canvas layout, the business intelligence platform identifies clear seasonal surges, distribution leaks, and execution operational margins.
+                </p>
+            </div>
+            <div>
+                <h2 class="text-xs uppercase tracking-[0.2em] font-bold text-neutral-400 mb-4">Business Problem</h2>
+                <p class="text-neutral-600 font-light leading-relaxed text-base">
+                    Multi-regional retail enterprises struggle to safely identify localized operational drops when scaling across multiple distribution verticals. Without monitoring localized metric points—such as fulfillment delays, transaction modes, and segment margins simultaneously—isolating quarterly structural dips from general market drift becomes a blind challenge.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- DETAILED SEGMENT ANALYSIS DEEP DIVE -->
+    <section class="max-w-6xl mx-auto px-6 pb-24 border-t border-neutral-200/60 pt-16">
+        <h2 class="text-xs uppercase tracking-[0.2em] font-bold text-neutral-400 mb-8">E-Commerce Structural Breakdown</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Consumer Segments -->
+            <div class="bg-white border border-neutral-200/70 rounded-xl p-6 shadow-sm">
+                <div class="w-8 h-8 rounded-lg bg-neutral-100 flex items-center justify-center mb-4 text-neutral-800 font-bold text-sm">👥</div>
+                <h4 class="font-semibold text-neutral-900 mb-1">Market Segments</h4>
+                <p class="text-xs text-neutral-400 mb-3">Consumer Lead: 48%</p>
+                <p class="text-xs text-neutral-500 leading-relaxed">Direct business tracking reveals consumer purchases drive maximum volume share (48%), followed closely by Corporate (33%) and Home Office nodes (19%).</p>
+            </div>
+            <!-- Payment Channel preferences -->
+            <div class="bg-white border border-neutral-200/70 rounded-xl p-6 shadow-sm">
+                <div class="w-8 h-8 rounded-lg bg-neutral-100 flex items-center justify-center mb-4 text-neutral-800 font-bold text-sm">💳</div>
+                <h4 class="font-semibold text-neutral-900 mb-1">Payment Modes</h4>
+                <p class="text-xs text-neutral-400 mb-3">COD Lead: 43%</p>
+                <p class="text-xs text-neutral-500 leading-relaxed">Cash-On-Delivery remains a massive checkout preference at 43%, with digital Online solutions following at 35% and Card processing at 22%.</p>
+            </div>
+            <!-- Regional Footprint -->
+            <div class="bg-white border border-neutral-200/70 rounded-xl p-6 shadow-sm">
+                <div class="w-8 h-8 rounded-lg bg-neutral-100 flex items-center justify-center mb-4 text-neutral-800 font-bold text-sm">📍</div>
+                <h4 class="font-semibold text-neutral-900 mb-1">Geographic Regions</h4>
+                <p class="text-xs text-neutral-400 mb-3">West Lead: 33%</p>
+                <p class="text-xs text-neutral-500 leading-relaxed">Regional supply volumes map strongly to West coast clusters (33%) and East sectors (29%), highlighting clear logistics hub importance.</p>
+            </div>
+            <!-- Inventory Focus -->
+            <div class="bg-white border border-neutral-200/70 rounded-xl p-6 shadow-sm">
+                <div class="w-8 h-8 rounded-lg bg-neutral-100 flex items-center justify-center mb-4 text-neutral-800 font-bold text-sm">📦</div>
+                <h4 class="font-semibold text-neutral-900 mb-1">Product Categories</h4>
+                <p class="text-xs text-neutral-400 mb-3">Top Sector: Office Supplies</p>
+                <p class="text-xs text-neutral-500 leading-relaxed">Office Supplies represents the top volume sector (0.64M). Hardware tracking marks Phones (0.20M) and Chairs (0.18M) as top items.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CORE DASHBOARD ANALYTICAL FEATURES -->
+    <section class="max-w-6xl mx-auto px-6 pb-24 border-t border-neutral-200/60 pt-16">
+        <h2 class="text-xs uppercase tracking-[0.2em] font-bold text-neutral-400 mb-8">Dashboard Visual System</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <div class="flex gap-3 items-start p-4 rounded-xl bg-white border border-neutral-200/60 shadow-sm">
+                <svg class="w-5 h-5 text-neutral-800 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+                <p class="text-sm text-neutral-600 font-medium">Year-over-Year (YoY) comparative line layers tracking 2019 vs 2020 revenue growth.</p>
+            </div>
+            <div class="flex gap-3 items-start p-4 rounded-xl bg-white border border-neutral-200/60 shadow-sm">
+                <svg class="w-5 h-5 text-neutral-800 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+                <p class="text-sm text-neutral-600 font-medium">Granular shipping mode parameters isolating inventory velocity across Standard Class vs Same Day.</p>
+            </div>
+            <div class="flex gap-3 items-start p-4 rounded-xl bg-white border border-neutral-200/60 shadow-sm">
+                <svg class="w-5 h-5 text-neutral-800 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+                <p class="text-sm text-neutral-600 font-medium">Dynamic multi-select regional card buttons slicing structural canvas modules on demand.</p>
+            </div>
+            <div class="flex gap-3 items-start p-4 rounded-xl bg-white border border-neutral-200/60 shadow-sm">
+                <svg class="w-5 h-5 text-neutral-800 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+                <p class="text-sm text-neutral-600 font-medium">Proportional doughnut slices isolating conversion ratios across target checkout systems.</p>
+            </div>
+            <div class="flex gap-3 items-start p-4 rounded-xl bg-white border border-neutral-200/60 shadow-sm">
+                <svg class="w-5 h-5 text-neutral-800 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+                <p class="text-sm text-neutral-600 font-medium">Horizontal category volume metrics indicating consumer supply run paths explicitly.</p>
+            </div>
+            <div class="flex gap-3 items-start p-4 rounded-xl bg-white border border-neutral-200/60 shadow-sm">
+                <svg class="w-5 h-5 text-neutral-800 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+                <p class="text-sm text-neutral-600 font-medium">Automated timeline tracking linking seasonal profit curves directly to delivery lag indices.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TWO COLUMN CONTENT: REAL INSIGHTS & RECOMMENDATIONS -->
+    <section class="max-w-6xl mx-auto px-6 pb-24 border-t border-neutral-200/60 pt-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
+            <!-- Key Insights from Data -->
+            <div>
+                <h2 class="text-xs uppercase tracking-[0.2em] font-bold text-neutral-400 mb-6">Key Dashboard Insights</h2>
+                <ul class="space-y-4">
+                    <li class="flex items-start gap-3 text-sm text-neutral-600 font-light">
+                        <span class="w-1.5 h-1.5 rounded-full bg-neutral-900 mt-1.5 shrink-0"></span>
+                        <strong>Year-over-Year Acceleration:</strong> Sales trajectory maps a major YoY lift into the second half of 2020, peaking drastically during September and November.
+                    </li>
+                    <li class="flex items-start gap-3 text-sm text-neutral-600 font-light">
+                        <span class="w-1.5 h-1.5 rounded-full bg-neutral-900 mt-1.5 shrink-0"></span>
+                        <strong>The April Profit Anomaly:</strong> While raw monthly sales metrics remain steady in April, net profit logs map a critical operational drop during that specific phase.
+                    </li>
+                    <li class="flex items-start gap-3 text-sm text-neutral-600 font-light">
+                        <span class="w-1.5 h-1.5 rounded-full bg-neutral-900 mt-1.5 shrink-0"></span>
+                        <strong>Logistic Balance:</strong> Standard Class shipping maps the highest footprint volume (0.33M), proving general corporate cost aversion models.
+                    </li>
+                    <li class="flex items-start gap-3 text-sm text-neutral-600 font-light">
+                        <span class="w-1.5 h-1.5 rounded-full bg-neutral-900 mt-1.5 shrink-0"></span>
+                        <strong>Fulfillment Baseline:</strong> General multi-category fulfillment cycles successfully stabilize on an average tracking timeline of 3.93 days.
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Recommendations based on Insights -->
+            <div>
+                <h2 class="text-xs uppercase tracking-[0.2em] font-bold text-neutral-400 mb-6">Strategic Recommendations</h2>
+                <ul class="space-y-4">
+                    <li class="flex items-start gap-3 text-sm text-neutral-600 font-light">
+                        <span class="w-1.5 h-1.5 rounded-full bg-neutral-900 mt-1.5 shrink-0"></span>
+                        <strong>Address Margin Deficits:</strong> Investigate April's localized pricing mechanics to remove sudden product line cost leaks or freight spikes.
+                    </li>
+                    <li class="flex items-start gap-3 text-sm text-neutral-600 font-light">
+                        <span class="w-1.5 h-1.5 rounded-full bg-neutral-900 mt-1.5 shrink-0"></span>
+                        <strong>Target Digital Conversions:</strong> With Cash-on-Delivery sitting high at 43%, structure targeted online checkout promos to secure upfront working capital.
+                    </li>
+                    <li class="flex items-start gap-3 text-sm text-neutral-600 font-light">
+                        <span class="w-1.5 h-1.5 rounded-full bg-neutral-900 mt-1.5 shrink-0"></span>
+                        <strong>Optimize Supply Hubs:</strong> Expand Western distribution warehouse capabilities to scale directly into your top regional demand node (33%).
+                    </li>
+                    <li class="flex items-start gap-3 text-sm text-neutral-600 font-light">
+                        <span class="w-1.5 h-1.5 rounded-full bg-neutral-900 mt-1.5 shrink-0"></span>
+                        <strong>Inventory Rebalancing:</strong> Shift hardware storage parameters to focus on top-performing units like Chairs and Phones to minimize holding costs.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="max-w-6xl mx-auto px-6 py-12 border-t border-neutral-200/60">
+        <div class="flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
+            <p class="text-xs text-neutral-400 font-medium">
+                © 2026 Nityanand Khule · Data Analytics Portfolio
+            </p>
+            <a href="../index.html"
+                class="group text-xs uppercase tracking-widest font-bold text-neutral-800 hover:text-neutral-500 transition-colors duration-300">
+                Back to Portfolio <span class="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
+            </a>
+        </div>
+    </footer>
+
+</body>
+</html>

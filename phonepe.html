@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhonePe UPI Transaction Analytics & BI Dashboard | Nityanand Khule</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        body {
+            background-color: #fcfbfa;
+        }
+    </style>
+</head>
+
+<body class="text-neutral-900 font-sans antialiased selection:bg-neutral-200">
+
+    <nav class="max-w-6xl mx-auto px-6 py-8 flex justify-between items-center">
+        <a href="../index.html" class="text-xs font-bold tracking-[0.2em] uppercase text-neutral-800 hover:opacity-70 transition">
+            NITYANAND KHULE
+        </a>
+        <a href="../index.html"
+            class="group border border-neutral-200 rounded-full px-5 py-2 text-xs font-medium uppercase tracking-wider bg-white shadow-sm hover:bg-neutral-900 hover:text-white hover:border-neutral-900 transition-all duration-300">
+            <span class="inline-block transition-transform duration-300 group-hover:-translate-x-1">←</span> Back
+        </a>
+    </nav>
+
+    <header class="max-w-6xl mx-auto px-6 pt-12 pb-16">
+        <div class="inline-flex items-center gap-2 bg-neutral-100 border border-neutral-200/60 rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-neutral-500">
+            <span class="w-1.5 h-1.5 rounded-full bg-purple-600 animate-pulse"></span>
+            Project 02 / Power BI & FinTech Analytics
+        </div>
+
+        <h1 class="text-4xl md:text-6xl font-light tracking-tight text-neutral-950 mt-6 mb-8 max-w-4xl leading-[1.1]">
+            PhonePe UPI Transaction <br class="hidden md:inline"><span class="font-semibold text-neutral-900">Analytics & BI Dashboard</span>
+        </h1>
+
+        <p class="max-w-2xl text-lg text-neutral-600 font-light leading-relaxed">
+            A comprehensive Business Intelligence system tracking over <strong class="font-medium text-neutral-900">3,333M in Transaction Value</strong>. This system breaks down transactional health across vertical service funnels like Loans, Insurance, P2P Money Transfers, and Utility Bills to isolate behavioral trends and checkout failures.
+        </p>
+    </header>
+
+    <section class="max-w-6xl mx-auto px-6 pb-20">
+        <div class="relative group overflow-hidden rounded-2xl border border-neutral-200/80 bg-neutral-100 shadow-md transition-shadow hover:shadow-xl duration-500">
+            <img src="../picture/phonepe.png"
+                alt="PhonePe Analytics Dashboard Main View"
+                class="w-full h-auto object-cover block">
+        </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-6 pb-24">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+            <div class="bg-white border border-neutral-200/70 rounded-xl p-6 shadow-sm">
+                <p class="text-[10px] uppercase tracking-widest text-neutral-400 font-bold mb-1">Total Volume Amount</p>
+                <h3 class="text-3xl font-bold tracking-tight text-neutral-900">3,333M</h3>
+            </div>
+            <div class="bg-white border border-neutral-200/70 rounded-xl p-6 shadow-sm">
+                <p class="text-[10px] uppercase tracking-widest text-neutral-400 font-bold mb-1">Total Transaction Count</p>
+                <h3 class="text-3xl font-bold tracking-tight text-neutral-900">300K</h3>
+            </div>
+            <div class="bg-white border border-neutral-200/70 rounded-xl p-6 shadow-sm">
+                <p class="text-[10px] uppercase tracking-widest text-purple-600/80 font-bold mb-1">Successful Trans.</p>
+                <h3 class="text-3xl font-bold tracking-tight text-purple-600">288K</h3>
+            </div>
+            <div class="bg-white border border-neutral-200/70 rounded-xl p-6 shadow-sm">
+                <p class="text-[10px] uppercase tracking-widest text-rose-600/80 font-bold mb-1">Failed Trans.</p>
+                <h3 class="text-3xl font-bold tracking-tight text-rose-600">12K</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-6 pb-24 border-t border-neutral-200/60 pt-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
+            <div>
+                <h2 class="text-xs uppercase tracking-[0.2em] font-bold text-neutral-400 mb-4">Project Overview</h2>
+                <p class="text-neutral-600 font-light leading-relaxed text-base">
+                    This project presents an interactive analytical look at multi-channel transactional telemetry mimicking consumer interactions on the PhonePe application interface. By organizing large raw transactional rows into clear relational tracking frames via Power BI, the dashboard isolates key consumer demand movements, tracking critical conversions from raw product lines down to targeted user checkout bottlenecks.
+                </p>
+            </div>
+            <div>
+                <h2 class="text-xs uppercase tracking-[0.2em] font-bold text-neutral-400 mb-4">Business Problem</h2>
+                <p class="text-neutral-600 font-light leading-relaxed text-base">
+                    Fintech platforms scale dynamically across multiple service domains simultaneously. Without continuous automated tracking models across functional verticals—such as insurance updates, merchant lines, and simple account-to-account operations—identifying systemic user checkout drops, bank system outages, or cyclical transaction declines becomes impossible at an enterprise scale.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-6 pb-24 border-t border-neutral-200/60 pt-16">
+        <h2 class="text-xs uppercase tracking-[0.2em] font-bold text-neutral-400 mb-8">Service Vertical Breakdown</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-white border border-neutral-200/70 rounded-xl p-6 shadow-sm">
+                <div class="w-8 h-8 rounded-lg bg-neutral-100 flex items-center justify-center mb-4 text-neutral-800 font-bold text-sm">₹</div>
+                <h4 class="font-semibold text-neutral-900 mb-1">Loans Domain</h4>
+                <p class="text-xs text-neutral-400 mb-3">Total Amount: 2,431M</p>
+                <p class="text-xs text-neutral-500 leading-relaxed">Accounts for the largest share of overall platform amount. Highest concentration driven by Auto Loans (644M) and Mutual Funds investment allocations (634M).</p>
+            </div>
+            <div class="bg-white border border-neutral-200/70 rounded-xl p-6 shadow-sm">
+                <div class="w-8 h-8 rounded-lg bg-neutral-100 flex items-center justify-center mb-4 text-neutral-800 font-bold text-sm">🛡️</div>
+                <h4 class="font-semibold text-neutral-900 mb-1">Insurance Tracking</h4>
+                <p class="text-xs text-neutral-400 mb-3">Total Amount: 513M</p>
+                <p class="text-xs text-neutral-500 leading-relaxed">Highly balanced spending portfolio across individual verticals led strongly by Car Insurance allocations (129.35M) and Term Life renewals (128.86M).</p>
+            </div>
+            <div class="bg-white border border-neutral-200/70 rounded-xl p-6 shadow-sm">
+                <div class="w-8 h-8 rounded-lg bg-neutral-100 flex items-center justify-center mb-4 text-neutral-800 font-bold text-sm">⇄</div>
+                <h4 class="font-semibold text-neutral-900 mb-1">Money Transfer (MT)</h4>
+                <p class="text-xs text-neutral-400 mb-3">Total Amount: 363M</p>
+                <p class="text-xs text-neutral-500 leading-relaxed">High-volume transactional system showing maximum user reliance on standard UPI ID channels (95M) closely trailed by Self Account mappings (94M).</p>
+            </div>
+            <div class="bg-white border border-neutral-200/70 rounded-xl p-6 shadow-sm">
+                <div class="w-8 h-8 rounded-lg bg-neutral-100 flex items-center justify-center mb-4 text-neutral-800 font-bold text-sm">📱</div>
+                <h4 class="font-semibold text-neutral-900 mb-1">Recharge & Bills</h4>
+                <p class="text-xs text-neutral-400 mb-3">Total Amount: 27M</p>
+                <p class="text-xs text-neutral-500 leading-relaxed">High operational frequency across localized utilities, led explicitly by routine consumer Electricity Bill items (7,157K) and Mobile Recharge payments (7,007K).</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-6 pb-24 border-t border-neutral-200/60 pt-16">
+        <h2 class="text-xs uppercase tracking-[0.2em] font-bold text-neutral-400 mb-8">Dashboard Features & Implementation</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <div class="flex gap-3 items-start p-4 rounded-xl bg-white border border-neutral-200/60 shadow-sm">
+                <svg class="w-5 h-5 text-purple-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                <p class="text-sm text-neutral-600 font-medium">Cross-filtering canvas components mapping vertical service matrices cleanly.</p>
+            </div>
+            <div class="flex gap-3 items-start p-4 rounded-xl bg-white border border-neutral-200/60 shadow-sm">
+                <svg class="w-5 h-5 text-purple-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                <p class="text-sm text-neutral-600 font-medium">Dynamic payment status doughnut splits tracking successful vs failed events.</p>
+            </div>
+            <div class="flex gap-3 items-start p-4 rounded-xl bg-white border border-neutral-200/60 shadow-sm">
+                <svg class="w-5 h-5 text-purple-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                <p class="text-sm text-neutral-600 font-medium">Categorized checkout error breakdown visualizing drop-off reasons instantly.</p>
+            </div>
+            <div class="flex gap-3 items-start p-4 rounded-xl bg-white border border-neutral-200/60 shadow-sm">
+                <svg class="w-5 h-5 text-purple-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                <p class="text-sm text-neutral-600 font-medium">Timeline trend mapping indicating volume changes across calendar months.</p>
+            </div>
+            <div class="flex gap-3 items-start p-4 rounded-xl bg-white border border-neutral-200/60 shadow-sm">
+                <svg class="w-5 h-5 text-purple-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                <p class="text-sm text-neutral-600 font-medium">Granular horizontal bar charts sorting sub-category volumes dynamically.</p>
+            </div>
+            <div class="flex gap-3 items-start p-4 rounded-xl bg-white border border-neutral-200/60 shadow-sm">
+                <svg class="w-5 h-5 text-purple-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                <p class="text-sm text-neutral-600 font-medium">Integrated time-slicer tools supporting precise performance reviews.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-6 pb-24 border-t border-neutral-200/60 pt-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
+            <div>
+                <h2 class="text-xs uppercase tracking-[0.2em] font-bold text-neutral-400 mb-6">Key Dashboard Insights</h2>
+                <ul class="space-y-4">
+                    <li class="flex items-start gap-3 text-sm text-neutral-600 font-light">
+                        <span class="w-1.5 h-1.5 rounded-full bg-neutral-900 mt-1.5 shrink-0"></span>
+                        <strong>Core Failure Profiles:</strong> Checkout logs show the largest failure factors are caused by Server Errors (~33.76%) and Wrong PIN validation entries (~27.61%).
+                    </li>
+                    <li class="flex items-start gap-3 text-sm text-neutral-600 font-light">
+                        <span class="w-1.5 h-1.5 rounded-full bg-neutral-900 mt-1.5 shrink-0"></span>
+                        <strong>Seasonal Spending Peaks:</strong> Platform volume trends show an annual spending peak during July (304M), with a notable dip in February (279M).
+                    </li>
+                    <li class="flex items-start gap-3 text-sm text-neutral-600 font-light">
+                        <span class="w-1.5 h-1.5 rounded-full bg-neutral-900 mt-1.5 shrink-0"></span>
+                        <strong>Dominant Sector Share:</strong> Loan provisions make up over 75% of the total recorded transaction amount on the dashboard.
+                    </li>
+                    <li class="flex items-start gap-3 text-sm text-neutral-600 font-light">
+                        <span class="w-1.5 h-1.5 rounded-full bg-neutral-900 mt-1.5 shrink-0"></span>
+                        <strong>Stable Success Margins:</strong> Across multiple categories, the general success threshold remains stable at ~95.9%.
+                    </li>
+                </ul>
+            </div>
+            
+            <div>
+                <h2 class="text-xs uppercase tracking-[0.2em] font-bold text-neutral-400 mb-6">Strategic Recommendations</h2>
+                <ul class="space-y-4">
+                    <li class="flex items-start gap-3 text-sm text-neutral-600 font-light">
+                        <span class="w-1.5 h-1.5 rounded-full bg-neutral-900 mt-1.5 shrink-0"></span>
+                        <strong>Optimize Bank Gateways:</strong> Address Server Errors (33.76% of failures) by implementing automated fallback routing to healthier bank partner nodes.
+                    </li>
+                    <li class="flex items-start gap-3 text-sm text-neutral-600 font-light">
+                        <span class="w-1.5 h-1.5 rounded-full bg-neutral-900 mt-1.5 shrink-0"></span>
+                        <strong>Enhance UI/UX for Errors:</strong> Introduce inline prompt cues for "Wrong PIN" states to reduce repeated failures.
+                    </li>
+                    <li class="flex items-start gap-3 text-sm text-neutral-600 font-light">
+                        <span class="w-1.5 h-1.5 rounded-full bg-neutral-900 mt-1.5 shrink-0"></span>
+                        <strong>Capitalize on High-Volume Months:</strong> Schedule infrastructure maintenance during low-activity periods like February, and plan promotional campaigns during peak months like July.
+                    </li>
+                    <li class="flex items-start gap-3 text-sm text-neutral-600 font-light">
+                        <span class="w-1.5 h-1.5 rounded-full bg-neutral-900 mt-1.5 shrink-0"></span>
+                        <strong>Cross-Sell High-Margin Services:</strong> Leverage high-traffic areas like P2P Money Transfers to promote underutilized options like Insurance.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="max-w-6xl mx-auto px-6 py-12 border-t border-neutral-200/60">
+        <div class="flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
+            <p class="text-xs text-neutral-400 font-medium">
+                © 2026 Nityanand Khule · Data Analytics Portfolio
+            </p>
+            <a href="../index.html"
+                class="group text-xs uppercase tracking-widest font-bold text-neutral-800 hover:text-neutral-500 transition-colors duration-300">
+                Back to Portfolio <span class="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
+            </a>
+        </div>
+    </footer>
+
+</body>
+</html>

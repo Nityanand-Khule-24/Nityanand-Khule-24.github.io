@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Product Reviews Sentiment Analysis | Nityanand Khule</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        body {
+            background-color: #fcfbfa;
+        }
+    </style>
+</head>
+
+<body class="text-neutral-900 font-sans antialiased selection:bg-neutral-200">
+
+    <nav class="max-w-6xl mx-auto px-6 py-8 flex justify-between items-center">
+        <a href="../index.html" class="text-xs font-bold tracking-[0.2em] uppercase text-neutral-800 hover:opacity-70 transition">
+            NITYANAND KHULE
+        </a>
+        <a href="../index.html"
+            class="group border border-neutral-200 rounded-full px-5 py-2 text-xs font-medium uppercase tracking-wider bg-white shadow-sm hover:bg-neutral-900 hover:text-white hover:border-neutral-900 transition-all duration-300">
+            <span class="inline-block transition-transform duration-300 group-hover:-translate-x-1">←</span> Back
+        </a>
+    </nav>
+
+    <header class="max-w-6xl mx-auto px-6 pt-12 pb-16">
+        <div class="inline-flex items-center gap-2 bg-neutral-100 border border-neutral-200/60 rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-neutral-500">
+            <span class="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse"></span>
+            Project 01 / NLP & Power BI
+        </div>
+
+        <h1 class="text-4xl md:text-6xl font-light tracking-tight text-neutral-950 mt-6 mb-8 max-w-4xl leading-[1.1]">
+            Amazon Product Reviews <br class="hidden md:inline"><span class="font-semibold text-neutral-900">Sentiment Analysis</span>
+        </h1>
+
+        <p class="max-w-2xl text-lg text-neutral-600 font-light leading-relaxed">
+            An end-to-end sentiment analysis project that analyzed over
+            <strong class="font-medium text-neutral-900">284,000 Amazon product reviews</strong> using Natural Language
+            Processing techniques to identify customer sentiment patterns and
+            generate actionable business insights through an interactive Power BI dashboard.
+        </p>
+    </header>
+
+    <section class="max-w-6xl mx-auto px-6 pb-20">
+        <div class="relative group overflow-hidden rounded-2xl border border-neutral-200/80 bg-neutral-100 shadow-md transition-shadow hover:shadow-xl duration-500">
+            <img src="../picture/amazon.png"
+                alt="Amazon Sentiment Analysis Dashboard"
+                class="w-full h-auto object-cover block">
+        </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-6 pb-24">
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6">
+            <div class="bg-white border border-neutral-200/70 rounded-xl p-6 shadow-sm">
+                <p class="text-[10px] uppercase tracking-widest text-neutral-400 font-bold mb-1">Total Reviews</p>
+                <h3 class="text-3xl font-bold tracking-tight text-neutral-900">284K</h3>
+            </div>
+            <div class="bg-white border border-neutral-200/70 rounded-xl p-6 shadow-sm">
+                <p class="text-[10px] uppercase tracking-widest text-neutral-400 font-bold mb-1">Avg Rating</p>
+                <h3 class="text-3xl font-bold tracking-tight text-neutral-900">4.19</h3>
+            </div>
+            <div class="bg-white border border-neutral-200/70 rounded-xl p-6 shadow-sm">
+                <p class="text-[10px] uppercase tracking-widest text-green-600/80 font-bold mb-1">Positive Reviews</p>
+                <h3 class="text-3xl font-bold tracking-tight text-green-600">90.19%</h3>
+            </div>
+            <div class="bg-white border border-neutral-200/70 rounded-xl p-6 shadow-sm">
+                <p class="text-[10px] uppercase tracking-widest text-red-600/80 font-bold mb-1">Negative Reviews</p>
+                <h3 class="text-3xl font-bold tracking-tight text-red-600">7.72%</h3>
+            </div>
+            <div class="bg-white border border-neutral-200/70 rounded-xl p-6 shadow-sm">
+                <p class="text-[10px] uppercase tracking-widest text-neutral-500 font-bold mb-1">Neutral Reviews</p>
+                <h3 class="text-3xl font-bold tracking-tight text-neutral-700">6.19K</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-6 pb-24 border-t border-neutral-200/60 pt-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
+            <div>
+                <h2 class="text-xs uppercase tracking-[0.2em] font-bold text-neutral-400 mb-4">Project Overview</h2>
+                <p class="text-neutral-600 font-light leading-relaxed text-base">
+                    Customer reviews are one of the most valuable sources of feedback for e-commerce businesses. This project leverages Natural Language Processing (NLP) techniques to analyze Amazon product reviews and classify customer sentiment into Positive, Neutral, and Negative categories. The results are presented through an interactive Power BI dashboard that enables stakeholders to understand customer satisfaction trends and product performance.
+                </p>
+            </div>
+            <div>
+                <h2 class="text-xs uppercase tracking-[0.2em] font-bold text-neutral-400 mb-4">Business Problem</h2>
+                <p class="text-neutral-600 font-light leading-relaxed text-base">
+                    Amazon receives thousands of customer reviews every day. Analyzing this feedback manually is inefficient and time-consuming. Businesses need automated solutions capable of identifying customer sentiment, measuring satisfaction levels, and detecting recurring product issues at scale.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-6 pb-24 border-t border-neutral-200/60 pt-16">
+        <h2 class="text-xs uppercase tracking-[0.2em] font-bold text-neutral-400 mb-8">Project Objectives</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <div class="flex gap-3 items-start p-4 rounded-xl bg-white border border-neutral-200/60 shadow-sm">
+                <svg class="w-5 h-5 text-neutral-800 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <p class="text-sm text-neutral-600 font-medium">Analyze large-scale Amazon review data sets efficiently.</p>
+            </div>
+            <div class="flex gap-3 items-start p-4 rounded-xl bg-white border border-neutral-200/60 shadow-sm">
+                <svg class="w-5 h-5 text-neutral-800 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <p class="text-sm text-neutral-600 font-medium">Classify reviews dynamically into distinct customer sentiments.</p>
+            </div>
+            <div class="flex gap-3 items-start p-4 rounded-xl bg-white border border-neutral-200/60 shadow-sm">
+                <svg class="w-5 h-5 text-neutral-800 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <p class="text-sm text-neutral-600 font-medium">Measure exact satisfaction thresholds using structural star ratings.</p>
+            </div>
+            <div class="flex gap-3 items-start p-4 rounded-xl bg-white border border-neutral-200/60 shadow-sm">
+                <svg class="w-5 h-5 text-neutral-800 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <p class="text-sm text-neutral-600 font-medium">Identify cyclical customer feedback anomalies and trends.</p>
+            </div>
+            <div class="flex gap-3 items-start p-4 rounded-xl bg-white border border-neutral-200/60 shadow-sm">
+                <svg class="w-5 h-5 text-neutral-800 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <p class="text-sm text-neutral-600 font-medium">Build data-rich, low-latency Power BI tracking dashboards.</p>
+            </div>
+            <div class="flex gap-3 items-start p-4 rounded-xl bg-white border border-neutral-200/60 shadow-sm">
+                <svg class="w-5 h-5 text-neutral-800 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <p class="text-sm text-neutral-600 font-medium">Generate reliable, data-backed operational business recommendations.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-6 pb-24 border-t border-neutral-200/60 pt-16">
+        <h2 class="text-xs uppercase tracking-[0.2em] font-bold text-neutral-400 mb-8">Tools & Technologies</h2>
+        <div class="flex flex-wrap gap-2">
+            <span class="bg-white border border-neutral-200 text-neutral-800 rounded-full px-4 py-2 text-xs font-medium shadow-sm">Python</span>
+            <span class="bg-white border border-neutral-200 text-neutral-800 rounded-full px-4 py-2 text-xs font-medium shadow-sm">Pandas</span>
+            <span class="bg-white border border-neutral-200 text-neutral-800 rounded-full px-4 py-2 text-xs font-medium shadow-sm">NLTK</span>
+            <span class="bg-white border border-neutral-200 text-neutral-800 rounded-full px-4 py-2 text-xs font-medium shadow-sm">Scikit-learn</span>
+            <span class="bg-white border border-neutral-200 text-neutral-800 rounded-full px-4 py-2 text-xs font-medium shadow-sm">Power BI</span>
+            <span class="bg-white border border-neutral-200 text-neutral-800 rounded-full px-4 py-2 text-xs font-medium shadow-sm">NLP</span>
+            <span class="bg-white border border-neutral-200 text-neutral-800 rounded-full px-4 py-2 text-xs font-medium shadow-sm">Data Visualization</span>
+        </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-6 pb-24 border-t border-neutral-200/60 pt-16">
+        <h2 class="text-xs uppercase tracking-[0.2em] font-bold text-neutral-400 mb-8">Project Workflow</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="group relative bg-white border border-neutral-200/70 rounded-xl p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+                <span class="text-xs font-bold text-neutral-400 block mb-2">01</span>
+                <h4 class="font-medium text-neutral-900 mb-1">Data Collection</h4>
+                <p class="text-xs text-neutral-500 leading-relaxed">Aggregating granular metrics directly from the unstructured Amazon Reviews Dataset.</p>
+            </div>
+            <div class="group relative bg-white border border-neutral-200/70 rounded-xl p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+                <span class="text-xs font-bold text-neutral-400 block mb-2">02</span>
+                <h4 class="font-medium text-neutral-900 mb-1">Data Preprocessing</h4>
+                <p class="text-xs text-neutral-500 leading-relaxed">Advanced data cleaning, text normalizations, and stop-word filtering protocols.</p>
+            </div>
+            <div class="group relative bg-white border border-neutral-200/70 rounded-xl p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+                <span class="text-xs font-bold text-neutral-400 block mb-2">03</span>
+                <h4 class="font-medium text-neutral-900 mb-1">Sentiment Classification</h4>
+                <p class="text-xs text-neutral-500 leading-relaxed">Applying targeted NLP scoring parameters to sort qualitative string arrays into distinct buckets.</p>
+            </div>
+            <div class="group relative bg-white border border-neutral-200/70 rounded-xl p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+                <span class="text-xs font-bold text-neutral-400 block mb-2">04</span>
+                <h4 class="font-medium text-neutral-900 mb-1">Review Aggregation</h4>
+                <p class="text-xs text-neutral-500 leading-relaxed">Compiling database architectures and establishing dynamic organizational KPI keys.</p>
+            </div>
+            <div class="group relative bg-white border border-neutral-200/70 rounded-xl p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+                <span class="text-xs font-bold text-neutral-400 block mb-2">05</span>
+                <h4 class="font-medium text-neutral-900 mb-1">Dashboard Development</h4>
+                <p class="text-xs text-neutral-500 leading-relaxed">Designing clean canvas cross-filtering elements layouts inside Power BI ecosystems.</p>
+            </div>
+            <div class="group relative bg-white border border-neutral-200/70 rounded-xl p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+                <span class="text-xs font-bold text-neutral-400 block mb-2">06</span>
+                <h4 class="font-medium text-neutral-900 mb-1">Business Insights</h4>
+                <p class="text-xs text-neutral-500 leading-relaxed">Translating visualization models into explicit actionable executive intelligence documentation.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-6 pb-24 border-t border-neutral-200/60 pt-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
+            <div>
+                <h2 class="text-xs uppercase tracking-[0.2em] font-bold text-neutral-400 mb-6">Key Insights</h2>
+                <ul class="space-y-4">
+                    <li class="flex items-start gap-3 text-sm text-neutral-600 font-light">
+                        <span class="w-1.5 h-1.5 rounded-full bg-neutral-900 mt-1.5 shrink-0"></span>
+                        Over 90% of customer reviews recorded were positive.
+                    </li>
+                    <li class="flex items-start gap-3 text-sm text-neutral-600 font-light">
+                        <span class="w-1.5 h-1.5 rounded-full bg-neutral-900 mt-1.5 shrink-0"></span>
+                        Products with 5-star ratings explicitly drove the highest volume thresholds.
+                    </li>
+                    <li class="flex items-start gap-3 text-sm text-neutral-600 font-light">
+                        <span class="w-1.5 h-1.5 rounded-full bg-neutral-900 mt-1.5 shrink-0"></span>
+                        Negative feedback profiles represented an edge margin of only 7.72%.
+                    </li>
+                    <li class="flex items-start gap-3 text-sm text-neutral-600 font-light">
+                        <span class="w-1.5 h-1.5 rounded-full bg-neutral-900 mt-1.5 shrink-0"></span>
+                        Customer satisfaction parameters remained highly consistent universally.
+                    </li>
+                    <li class="flex items-start gap-3 text-sm text-neutral-600 font-light">
+                        <span class="w-1.5 h-1.5 rounded-full bg-neutral-900 mt-1.5 shrink-0"></span>
+                        Proven high correlation factors between structural star indexes and string sentiment pools.
+                    </li>
+                </ul>
+            </div>
+            
+            <div>
+                <h2 class="text-xs uppercase tracking-[0.2em] font-bold text-neutral-400 mb-6">What I Learned</h2>
+                <ul class="space-y-4">
+                    <li class="flex items-start gap-3 text-sm text-neutral-600 font-light">
+                        <span class="w-1.5 h-1.5 rounded-full bg-neutral-900 mt-1.5 shrink-0"></span>
+                        Core conceptual implementations of Natural Language Processing workflows.
+                    </li>
+                    <li class="flex items-start gap-3 text-sm text-neutral-600 font-light">
+                        <span class="w-1.5 h-1.5 rounded-full bg-neutral-900 mt-1.5 shrink-0"></span>
+                        Advanced text-tokenizing methodologies and programmatic multi-labeling parameters.
+                    </li>
+                    <li class="flex items-start gap-3 text-sm text-neutral-600 font-light">
+                        <span class="w-1.5 h-1.5 rounded-full bg-neutral-900 mt-1.5 shrink-0"></span>
+                        Developing production-ready relational data visual mapping files inside Power BI frameworks.
+                    </li>
+                    <li class="flex items-start gap-3 text-sm text-neutral-600 font-light">
+                        <span class="w-1.5 h-1.5 rounded-full bg-neutral-900 mt-1.5 shrink-0"></span>
+                        Strategic structural corporate dashboard layout management frameworks.
+                    </li>
+                    <li class="flex items-start gap-3 text-sm text-neutral-600 font-light">
+                        <span class="w-1.5 h-1.5 rounded-full bg-neutral-900 mt-1.5 shrink-0"></span>
+                        Translating metadata patterns safely into concise high-value commercial statements.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="max-w-6xl mx-auto px-6 py-12 border-t border-neutral-200/60">
+        <div class="flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
+            <p class="text-xs text-neutral-400 font-medium">
+                © 2026 Nityanand Khule · Data Analytics Portfolio
+            </p>
+            <a href="../index.html"
+                class="group text-xs uppercase tracking-widest font-bold text-neutral-800 hover:text-neutral-500 transition-colors duration-300">
+                Back to Portfolio <span class="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
+            </a>
+        </div>
+    </footer>
+
+</body>
+</html>
