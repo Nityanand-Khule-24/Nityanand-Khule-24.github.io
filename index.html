@@ -1,1106 +1,573 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="light">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nityanand Khule - Personal Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NITYANAND KHULE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
 
-  <!--
-    - favicon
-  -->
-  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+    <style>
+        .font-display {
+            font-family: 'Syne', sans-serif;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
 
-  <!--
-    - custom css link
-  -->
-  <link rel="stylesheet" href="./assets/css/style.css">
+        .font-sans {
+            font-family: 'Inter', sans-serif;
+        }
 
-  <!--
-    - google font link
-  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+        @keyframes marquee {
+            0% {
+                transform: translateX(0%);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .animate-marquee {
+            display: flex;
+            width: max-content;
+            animation: marquee 25s linear infinite;
+        }
+
+        body {
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Hide the default browser cursor everywhere except on devices that don't support hover */
+        @media (hover: hover) {
+
+            html,
+            body,
+            a,
+            button,
+            .custom-hover-target {
+                cursor: none !important;
+            }
+        }
+    </style>
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brandCream: '#F4F1EA',
+                        brandDark: '#121212',
+                        brandGray: '#707070',
+                    }
+                }
+            }
+        }
+
+        function toggleDarkMode() {
+            const html = document.documentElement;
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                document.getElementById('theme-btn-text').innerText = '◑ DARK';
+            } else {
+                html.classList.add('dark');
+                document.getElementById('theme-btn-text').innerText = '◑ LIGHT';
+            }
+        }
+    </script>
 </head>
 
-<body>
-
-  <!--
-    - #MAIN
-  -->
-
-  <main>
-
-    <!--
-      - #SIDEBAR
-    -->
-
-    <aside class="sidebar" data-sidebar>
-
-      <div class="sidebar-info">
-
-        <figure class="avatar-box">
-          <img src="./assets/images/avatar-1.jpeg" alt="Richard hanrick" width="80">
-        </figure>
-
-        <div class="info-content">
-          <h1 class="name" title="Richard hanrick">Khule Nityanand</h1>
-
-          <p class="title">Data Analyst</p>
-        </div>
-
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
-
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
-
-      </div>
-
-      <div class="sidebar-info_more">
-
-        <div class="separator"></div>
-
-        <ul class="contacts-list">
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
-
-              <a href="nityanandkhule24@gmail.com.com" class="contact-link">nityanandkhule24@gmail.com</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Phone</p>
-
-              <a href="tel:+918149741841" class="contact-link">+91 8149741841</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="calendar-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Birthday</p>
-
-              <time datetime="1982-06-23">Dec 12, 2005</time>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Location</p>
-
-              <address>Pune,Maharashtra,India</address>
-            </div>
-
-          </li>
-
-        </ul>
-
-        <div class="separator"></div>
-
-        <ul class="social-list">
-
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-facebook"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-          </li>
-
-        </ul>
-
-      </div>
-
-    </aside>
-
-
-
-
-
-    <!--
-      - #main-content
-    -->
-
-    <div class="main-content">
-
-      <!--
-        - #NAVBAR
-      -->
-
-      <nav class="navbar">
-
-        <ul class="navbar-list">
-
-          <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>About</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resume</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>blog</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Projects</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Contact</button>
-          </li>
-
-        </ul>
-
-      </nav>
-
-
-
-
-
-      <!--
-        - #ABOUT
-      -->
-
-      <article class="about  active" data-page="about">
-
-        <header>
-          <h2 class="h2 article-title">About me</h2>
-        </header>
-
-        <section class="about-text">
-          <p>
-           I am an Artificial Intelligence and Machine Learning student with a strong aspiration to build a career as a Data Analyst. 
-           I am passionate about transforming raw data into meaningful insights that support data-driven decision-making.
-          </p>
-
-          <p>
-           I have hands-on experience working with Python (Pandas, NumPy), SQL, Excel, and Power BI for data cleaning, analysis, and visualization. 
-           I have built projects such as Amazon Sentiment Analysis using NLP techniques and PhonePe Transaction Analysis to identify trends in digital payments across India.
-          </p>
-
-          <p>Through these projects, I have developed practical skills in data preprocessing, exploratory data analysis (EDA), dashboard creation, and extracting actionable business insights. I am continuously improving my analytical and problem-solving skills to contribute effectively in a data-driven environment.</p>
-        </section>
-
-
-        <!--
-          - service
-        -->
-
-        <section class="service">
-
-          <h3 class="h3 service-title">What i'm doing</h3>
-
-          <ul class="service-list">
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-design.png
-                " alt="design icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Data Analysis</h4>
-
-                <p class="service-item-text">
-                  High-quality data analysis using Python, SQL, and Excel to transform raw datasets into meaningful insights and business reports.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/data-visualization.png" alt="Web development icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Data Visualization</h4>
-
-                <p class="service-item-text">
-                  Designing professional dashboards and interactive reports using Power BI and Excel to communicate trends, KPIs, and performance metrics clearly.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/gear.png" alt="mobile app icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Machine Learning</h4>
-
-                <p class="service-item-text">
-                  Building predictive models and classification systems using Python and machine learning algorithms to solve real-world problems.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/data-cleansing.png" alt="camera icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Data Cleaning & Preprocessing</h4>
-
-                <p class="service-item-text">
-                  Performing structured data cleaning, transformation, and exploratory data analysis (EDA) to ensure accuracy and reliability before modeling.
-                </p>
-              </div>
-
-            </li>
-
-          </ul>
-
-        </section>
-
-
-        <!--
-          - testimonials
-        -->
-
-        
-
-
-        <!--
-          - testimonials modal
-        -->
-
-        <div class="modal-container" data-modal-container>
-
-          <div class="overlay" data-overlay></div>
-
-          <section class="testimonials-modal">
-
-            <button class="modal-close-btn" data-modal-close-btn>
-              <ion-icon name="close-outline"></ion-icon>
-            </button>
-
-            <div class="modal-img-wrapper">
-              <figure class="modal-avatar-box">
-                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
-              </figure>
-
-              <img src="./assets/images/icon-quote.svg" alt="quote icon">
-            </div>
-
-            <div class="modal-content">
-
-              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
-
-              <time datetime="2021-06-14">14 June, 2021</time>
-
-              <div data-modal-text>
-                <p>
-                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                  lot of experience
-                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                  consectetur adipiscing
-                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                </p>
-              </div>
-
-            </div>
-
-          </section>
-
-        </div>
-
-
-        <!--
-          - clients
-        -->
-
-        <!-- <section class="clients">
-
-          <h3 class="h3 clients-title">Clients</h3>
-
-          <ul class="clients-list has-scrollbar">
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-1-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-2-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-3-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-4-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-5-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-6-color.png" alt="client logo">
-              </a>
-            </li>
-
-          </ul>
-
-        </section> -->
-
-      </article>
-
-
-
-
-
-      <!--
-        - #RESUME
-      -->
-
-      <article class="resume" data-page="resume">
-
-        <header>
-          <h2 class="h2 article-title">Resume</h2>
-        </header>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Education</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">B.Tech in Artificial Intelligence & Machine Learning</h4>
-
-              <span>2023 — 2027</span>
-
-              <p class="timeline-text">
-                Focused on data analytics, machine learning algorithms, statistics, and database management systems. Gained hands-on experience through real-world projects involving data preprocessing, visualization, and predictive modeling..
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Higher Secondary Education (Science Stream)</h4>
-
-              <span>2021 — 2023</span>
-
-              <p class="timeline-text">
-                Studied Mathematics, Physics, and Computer Science, building a strong foundation in analytical thinking and problem-solving.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Secondary School Education</h4>
-
-              <span>2019 — 2021</span>
-
-              <p class="timeline-text">
-                Developed foundational knowledge in mathematics and logical reasoning, which later supported technical and analytical learning.
-                eos.
-              </p>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Experience</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Data Analysis Projects (Academic & Self-Initiated)</h4>
-
-              <span>2024 — Present</span>
-
-              <p class="timeline-text">
-                Worked on multiple end-to-end data analysis projects including Amazon Sentiment Analysis and PhonePe Transaction Analysis. Responsibilities included data cleaning, exploratory data analysis (EDA), dashboard development, and insight extraction.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Power BI Dashboard Development</h4>
-
-              <span>2024 — Present</span>
-
-              <p class="timeline-text">
-               Designed interactive dashboards to visualize KPIs, transaction trends, and regional performance metrics using Power BI and Excel.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Machine Learning Model Implementation</h4>
-
-              <span>2024 — Present</span>
-
-              <p class="timeline-text">
-               Built classification models using Python and NLP techniques to analyze textual data and generate predictive insights.
-              </p>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-        <section class="skill">
-
-          <h3 class="h3 skills-title">My skills</h3>
-
-          <ul class="skills-list content-card">
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Python (Pandas, NumPy)</h5>
-                <!-- <data value="80">80%</data> -->
-              </div>
-
-              <!-- <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
-              </div> -->
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">SQL</h5>
-                <!-- <data value="70">70%</data> -->
-              </div>
-
-              <!-- <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 70%;"></div>
-              </div> -->
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Power BI</h5>
-                <!-- <data value="90">90%</data> -->
-              </div>
-
-              <!-- <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 90%;"></div>
-              </div> -->
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Excel (Advanced Functions & Pivot Tables)</h5>
-                <!-- <data value="50">50%</data> -->
-              </div>
-
-              <!-- <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 50%;"></div>
-              </div> -->
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Data Cleaning & EDA</h5>
-                <!-- <data value="50">50%</data> -->
-              </div>
-
-              <!-- <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 50%;"></div>
-              </div> -->
-
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #PORJECT
-      -->
-
-      <article class="porject" data-page="porject">
-
-        <header>
-          <h2 class="h2 article-title">Blogs</h2>
-        </header>
-
-        <section class="projects">
-
-          <ul class="filter-list">
-
-            <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Web design</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Applications</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Web development</button>
-            </li>
-
-          </ul>
-
-          <div class="filter-select-box">
-
-            <button class="filter-select" data-select>
-
-              <div class="select-value" data-selecct-value>Select category</div>
-
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
-              </div>
-
-            </button>
-
-            <ul class="select-list">
-
-              <li class="select-item">
-                <button data-select-item>All</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Web design</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Applications</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Web development</button>
-              </li>
-
-            </ul>
-
-          </div>
-
-          <ul class="project-list">
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Finance</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Orizon</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Fundo</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Brawlhalla</h3>
-
-                <p class="project-category">Applications</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
-                </figure>
-
-                <h3 class="project-title">DSM.</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">MetaSpark</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Summary</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Task Manager</h3>
-
-                <p class="project-category">Applications</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Arrival</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #project
-      -->
-
-      <article class="Projects" data-page="projects">
-
-        <header>
-          <h2 class="h2 article-title">Projects</h2>
-        </header>
-
-        <section class="blog-posts">
-
-          <ul class="blog-posts-list">
-
-            <li class="blog-post-item">
-              <a href="phonpe.html">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/phonepe.jpg" alt="Design conferences in 2022" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Project</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Aug 2025</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">PhonePe Digital Transactions Analysis Dashboard</h3>
-
-                  <p class="blog-text">
-                    Analyzed PhonePe UPI transaction data to identify payment trends, regional performance, and user behavior patterns using data analytics and visualization techniques.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="amazon.html">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/amazon.jpg" alt="Best fonts every designer" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Project</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Nov 2025</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Amazon Reviews Sentiment Analysis</h3>
-
-                  <p class="blog-text">
-                    Analyzed Amazon customer reviews using sentiment analysis to uncover customer satisfaction trends and actionable business insights.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <!-- <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-3.jpg" alt="Design digest #80" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design digest #80</h3>
-
-                  <p class="blog-text">
-                    Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam corporis suscipit.
-                  </p>
-
-                </div>
-
-              </a>
-            </li> -->
-
-            <!-- <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-4.jpg" alt="UI interactions of the week" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">UI interactions of the week</h3>
-
-                  <p class="blog-text">
-                    Enim ad minim veniam, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi.
-                  </p>
-
-                </div>
-
-              </a>
-            </li> -->
-
-            <!-- <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-5.jpg" alt="The forgotten art of spacing" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">The forgotten art of spacing</h3>
-
-                  <p class="blog-text">
-                    Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  </p>
-
-                </div>
-
-              </a>
-            </li> -->
-
-            <!-- <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-6.jpg" alt="Design digest #79" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design digest #79</h3>
-
-                  <p class="blog-text">
-                    Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
-                  </p>
-
-                </div>
-
-              </a>
-            </li> -->
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #CONTACT
-      -->
-
-      <article class="contact" data-page="contact">
-
-        <header>
-          <h2 class="h2 article-title">Contact</h2>
-        </header>
-
-        <section class="mapbox" data-mapbox>
-          <figure>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d242118.1700633144!2d73.69815139414172!3d18.52454503756589!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf2e67461101%3A0x828d43bf9d9ee343!2sPune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1771081182807!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-              width="400" height="300" loading="lazy"></iframe>
-          </figure>
-        </section>
-
-        <section class="contact-form">
-
-          <h3 class="h3 form-title">Contact Form</h3>
-
-          <form action="#" class="form" data-form>
-
-            <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
-
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
-            </div>
-
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
-
-            <button class="form-btn" type="submit" disabled data-form-btn>
-              <ion-icon name="paper-plane"></ion-icon>
-              <span>Send Message</span>
-            </button>
-
-          </form>
-
-        </section>
-
-      </article>
-
+<body
+    class="bg-brandCream text-brandDark dark:bg-brandDark dark:text-brandCream font-sans antialiased selection:bg-brandDark selection:text-brandCream dark:selection:bg-brandCream dark:selection:text-brandDark relative overflow-x-hidden">
+
+    <div id="custom-cursor"
+        class="hidden md:block fixed top-0 left-0 w-3 h-3 bg-brandDark dark:bg-brandCream rounded-full pointer-events-none z-50 transform -translate-x-1/2 -translate-y-1/2 will-change-transform mix-blend-difference transition-[width,height,background-color] duration-300 ease-out">
+    </div>
+    <div id="custom-cursor-text"
+        class="hidden md:flex fixed top-0 left-0 w-0 h-0 bg-brandDark text-brandCream dark:bg-brandCream dark:text-brandDark rounded-full pointer-events-none z-50 items-center justify-center text-[10px] font-bold tracking-wider opacity-0 transform -translate-x-1/2 -translate-y-1/2 will-change-transform transition-[width,height,opacity] duration-300 ease-out">
+        VIEW ↗
     </div>
 
-  </main>
+    <nav class="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center text-sm font-medium">
+        <a href="#" class="tracking-tighter font-semibold"> NITYANAND KHULE</a>
+        <button onclick="toggleDarkMode()"
+            class="border border-brandDark/20 dark:border-brandCream/20 rounded-full px-4 py-1.5 hover:bg-brandDark hover:text-brandCream dark:hover:bg-brandCream dark:hover:text-brandDark transition-all text-xs tracking-wider"
+            id="theme-btn-text">
+            ◑ DARK
+        </button>
+    </nav>
+
+    <header class="max-w-7xl mx-auto px-6 pt-12 pb-20 relative">
+        <span class="text-xs tracking-widest text-brandGray uppercase font-medium block mb-4">Data Analyst & Data
+            Engineer</span>
+        <h1 class="font-display text-6xl md:text-[4rem] lg:text-[7rem] leading-[0.85] tracking-tight mb-8 break-words">
+            Nityanand Khule
+        </h1>
+        <p
+            class="text-xl md:text-2xl max-w-2xl text-brandDark/80 dark:text-brandCream/80 leading-relaxed font-normal mb-12">
+            Based in India. Over one years of experience across of projects and tech platforms.
+        </p>
+
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+            <div class="flex flex-wrap gap-2 text-xs font-medium tracking-wide">
+                <span
+                    class="border border-brandDark/20 dark:border-brandCream/20 rounded-full px-4 py-2 flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> AVAILABLE FOR WORK
+                </span>
+                <span class="border border-brandDark/20 dark:border-brandCream/20 rounded-full px-4 py-2">PUNE,
+                    INDIA</span>
+                <span class="border border-brandDark/20 dark:border-brandCream/20 rounded-full px-4 py-2">AWWWARDS
+                    JURY</span>
+            </div>
+
+            <div class="hidden md:flex flex-col items-center h-40">
+                <div class="w-px flex-1 bg-brandGray/50"></div>
+
+                <span class="text-[10px] tracking-widest uppercase rotate-90 my-4 text-brandGray font-medium">
+                    Scroll
+                </span>
+
+                <div class="w-px flex-1 bg-brandGray/50"></div>
+            </div>
+        </div>
+    </header>
+
+    <section
+        class="border-y border-brandDark/10 dark:border-brandCream/10 py-4 overflow-hidden bg-brandDark text-brandCream dark:bg-brandCream dark:text-brandDark">
+        <div class="animate-marquee text-sm font-semibold tracking-widest uppercase flex gap-8 whitespace-nowrap">
+            <span>SYSTEMS THINKING ✦ DESIGN SYSTEMS ✦ 0→1 PRODUCT WORK ✦ DATA-INFORMED DESIGN ✦ PROTOTYPING ✦ A/B
+                TESTING ✦ DESIGN × ENGINEERING ✦&nbsp;</span>
+            <!-- <span>SYSTEMS THINKING ✦ DESIGN SYSTEMS ✦ 0→1 PRODUCT WORK ✦ DATA-INFORMED DESIGN ✦ PROTOTYPING ✦ A/B TESTING ✦ DESIGN × ENGINEERING ✦&nbsp;</span> -->
+        </div>
+    </section>
+
+    <main class="max-w-7xl mx-auto px-6 py-24">
+        <div
+            class="flex justify-between items-baseline border-b border-brandDark/10 dark:border-brandCream/10 pb-4 mb-16">
+            <h2 class="text-xs uppercase tracking-widest text-brandGray font-medium">Selected Projects</h2>
+            <span class="font-display text-4xl text-brandDark/20 dark:text-brandCream/20">Work</span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+
+            <div
+                class="custom-hover-target group flex flex-col justify-between border border-brandDark/10 dark:border-brandCream/10 rounded-2xl p-6 md:p-8 bg-brandDark/[0.02] dark:bg-brandCream/[0.02] hover:border-brandDark/40 dark:hover:border-brandCream/40 transition-all">
+                <div>
+                    <div class="flex justify-between text-xs text-brandGray mb-8 font-medium">
+                        <span>01</span>
+                        <span>Data Analytics Project / 2026</span>
+                    </div>
+                    <h3
+                        class="text-2xl md:text-3xl font-medium tracking-tight mb-4 group-hover:underline decoration-1 underline-offset-4">
+                        Amazon Product Reviews Sentiment Analysis
+                    </h3>
+                    <div class="flex gap-2 text-[10px] font-bold tracking-widest text-brandGray mb-8">
+                        <span>TEXT ANALYTICS</span> <span>CUSTOMER INSIGHTS</span>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4 pt-6 border-t border-brandDark/10 dark:border-brandCream/10 mb-8">
+                    <div>
+                        <span class="text-3xl md:text-4xl font-display block">87%</span>
+                        <span class="text-xs text-brandGray">Sentiment Classification Accuracy</span>
+                    </div>
+                    <div>
+                        <span class="text-3xl md:text-4xl font-display block">12K+</span>
+                        <span class="text-xs text-brandGray">Customer Reviews Processed</span>
+                    </div>
+                </div>
+                <div
+                    class="w-full aspect-[4/3] bg-brandDark/10 dark:bg-brandCream/10 rounded-lg flex items-center justify-center overflow-hidden">
+
+                    <img src="./picture/amazon.png" alt="Amazon Product Reviews Sentiment Analysis Dashboard"
+                        class="w-full h-full object-cover" />
+                </div><br>
+                <div>
+                    <span class="text-sm leading-relaxed text-brandGray">
+                        Analyzed Amazon product reviews using NLP techniques to classify customer sentiment, uncover
+                        product strengths and weaknesses, and generate actionable business insights.
+                    </span>
+                </div>
+                <br>
+                <div class="flex flex-wrap gap-3">
+                    <span
+                        class="border border-brandDark/20 dark:border-brandCream/20 rounded-full px-4 py-2 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                        Python
+                    </span>
+
+                    <span
+                        class="border border-brandDark/20 dark:border-brandCream/20 rounded-full px-4 py-2 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                        Pandas
+                    </span>
+
+                    <span
+                        class="border border-brandDark/20 dark:border-brandCream/20 rounded-full px-4 py-2 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                        NLTK
+                    </span>
+
+                    <span
+                        class="border border-brandDark/20 dark:border-brandCream/20 rounded-full px-4 py-2 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                        Scikit-learn
+                    </span>
+
+                    <span
+                        class="border border-brandDark/20 dark:border-brandCream/20 rounded-full px-4 py-2 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                        Power BI
+                    </span>
+                </div>
+            </div>
+
+            <div
+                class="custom-hover-target group flex flex-col justify-between border border-brandDark/10 dark:border-brandCream/10 rounded-2xl p-6 md:p-8 bg-brandDark/[0.02] dark:bg-brandCream/[0.02] hover:border-brandDark/40 dark:hover:border-brandCream/40 transition-all">
+                <div>
+                    <div class="flex justify-between text-xs text-brandGray mb-8 font-medium">
+                        <span>02</span>
+                        <span>PhonePe Analysis / 2026</span>
+                    </div>
+                    <h3
+                        class="text-2xl md:text-3xl font-medium tracking-tight mb-4 group-hover:underline decoration-1 underline-offset-4">
+                        PhonePe UPI Transaction Analytics & BI Dashboard
+                    </h3>
+                    <div class="flex gap-2 text-[10px] font-bold tracking-widest text-brandGray mb-8">
+                        <span>BUSINESS INTELLIGENCE</span> <span>DATA VISUALIZATION</span>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4 pt-6 border-t border-brandDark/10 dark:border-brandCream/10 mb-8">
+                    <div>
+                        <span class="text-3xl md:text-4xl font-display block">₹50M+</span>
+                        <span class="text-xs text-brandGray">Transaction Volume</span>
+                    </div>
+                    <div>
+                        <span class="text-3xl md:text-4xl font-display block">95%</span>
+                        <span class="text-xs text-brandGray">Dashboard Accuracy</span>
+                    </div>
+                </div>
+                <div
+                    class="w-full aspect-[4/3] bg-brandDark/10 dark:bg-brandCream/10 rounded-lg flex items-center justify-center overflow-hidden">
+
+                    <img src="./picture/phonepe.png" alt="Amazon Product Reviews Sentiment Analysis Dashboard"
+                        class="w-full h-full object-cover" />
+                </div><br>
+                <div>
+                    <span class="text-sm leading-relaxed text-brandGray">
+                        Developed an interactive Power BI dashboard to analyze PhonePe UPI transactions across states,
+                        districts, and categories, enabling data-driven insights into transaction volume, value, and
+                        user adoption trends.
+                    </span>
+                </div>
+                <br>
+                <div class="flex flex-wrap gap-3">
+                    <span
+                        class="border border-brandDark/20 dark:border-brandCream/20 rounded-full px-4 py-2 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                        Python
+                    </span>
+
+                    <span
+                        class="border border-brandDark/20 dark:border-brandCream/20 rounded-full px-4 py-2 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                        Microsoft Excel
+                    </span>
+
+                    <span
+                        class="border border-brandDark/20 dark:border-brandCream/20 rounded-full px-4 py-2 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                        Power BI
+                    </span>
+
+                    <span
+                        class="border border-brandDark/20 dark:border-brandCream/20 rounded-full px-4 py-2 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                        Pandas
+                    </span>
+
+                    <span
+                        class="border border-brandDark/20 dark:border-brandCream/20 rounded-full px-4 py-2 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                        Data Visualization
+                    </span>
+                </div>
+            </div>
+
+            <div
+                class="custom-hover-target group flex flex-col justify-between border border-brandDark/10 dark:border-brandCream/10 rounded-2xl p-6 md:p-8 bg-brandDark/[0.02] dark:bg-brandCream/[0.02] hover:border-brandDark/40 dark:hover:border-brandCream/40 transition-all">
+                <div>
+                    <div class="flex justify-between text-xs text-brandGray mb-8 font-medium">
+                        <span>03</span>
+                        <span>SuperStore Sales Analysis / 2026</span>
+                    </div>
+                    <h3
+                        class="text-2xl md:text-3xl font-medium tracking-tight mb-4 group-hover:underline decoration-1 underline-offset-4">
+                        SuperStore Sales Analysis
+                    </h3>
+                    <div class="flex gap-2 text-[10px] font-bold tracking-widest text-brandGray mb-8">
+                        <span>SALES ANALYTICS</span> <span>POWER BI</span>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4 pt-6 border-t border-brandDark/10 dark:border-brandCream/10 mb-8">
+                    <div>
+                        <span class="text-3xl md:text-4xl font-display block">22K+</span>
+                        <span class="text-xs text-brandGray">Units Sold</span>
+                    </div>
+                    <div>
+                        <span class="text-3xl md:text-4xl font-display block">3.93</span>
+                        <span class="text-xs text-brandGray">Avg Delivery Days</span>
+                    </div>
+                </div>
+                <div
+                    class="w-full aspect-[4/3] bg-brandDark/10 dark:bg-brandCream/10 rounded-lg flex items-center justify-center overflow-hidden">
+
+                    <img src="./picture/superstore.png" alt="Amazon Product Reviews Sentiment Analysis Dashboard"
+                        class="w-full h-full object-cover" />
+                </div><br>
+                <div>
+                    <span class="text-sm leading-relaxed text-brandGray">
+                        Built an interactive Power BI dashboard to analyze Super Store sales performance across regions,
+                        categories, customer segments, and shipping modes. Identified sales trends, profit drivers, and
+                        operational insights through dynamic visualizations and KPI tracking.
+                    </span>
+                </div>
+                <br>
+                <div class="flex flex-wrap gap-3">
+                    <div class="flex flex-wrap gap-3">
+                        <span
+                            class="border border-brandDark/20 dark:border-brandCream/20 rounded-full px-4 py-2 flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                            Power BI
+                        </span>
+
+                        <span
+                            class="border border-brandDark/20 dark:border-brandCream/20 rounded-full px-4 py-2 flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                            Excel
+                        </span>
+
+                        <span
+                            class="border border-brandDark/20 dark:border-brandCream/20 rounded-full px-4 py-2 flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                            DAX
+                        </span>
+
+                        <span
+                            class="border border-brandDark/20 dark:border-brandCream/20 rounded-full px-4 py-2 flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                            Data Modeling
+                        </span>
+
+                        <span
+                            class="border border-brandDark/20 dark:border-brandCream/20 rounded-full px-4 py-2 flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                            Data Visualization
+                        </span>
+
+                        <span
+                            class="border border-brandDark/20 dark:border-brandCream/20 rounded-full px-4 py-2 flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                            Business Intelligence
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <section class="max-w-7xl mx-auto px-6 py-24 bg-brandDark/5 dark:bg-brandCream/5 rounded-3xl my-12">
+        <div
+            class="flex justify-between items-baseline border-b border-brandDark/10 dark:border-brandCream/10 pb-4 mb-16">
+            <h2 class="text-xs uppercase tracking-widest text-brandGray font-medium">My Story</h2>
+            <span class="font-display text-4xl text-brandDark/20 dark:text-brandCream/20">About</span>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+
+            <div
+                class="lg:col-span-7 space-y-6 text-lg md:text-xl text-brandDark/90 dark:text-brandCream/90 font-normal leading-relaxed">
+
+                <p>
+                    <strong class="font-semibold">I'm a Data Analyst passionate about transforming raw data into
+                        actionable insights.</strong>
+                    I specialize in SQL, Python, Power BI, and BigQuery to uncover trends, optimize processes, and
+                    support data-driven decision-making.
+                </p>
+
+                <p>
+                    <strong class="font-semibold">My approach is analytics-first.</strong>
+                    I focus on understanding business problems, cleaning and analyzing data, and building meaningful
+                    dashboards that help stakeholders make informed decisions.
+                </p>
+
+                <p>
+                    I enjoy working across the data lifecycle—from data extraction and transformation to visualization
+                    and reporting. My goal is to leverage data to solve real-world business challenges and continuously
+                    improve through learning and hands-on projects.
+                </p>
+
+            </div>
+
+            <div class="lg:col-span-5 space-y-12 lg:pl-12">
+
+                <div>
+                    <h4 class="text-[10px] font-bold uppercase tracking-widest text-brandGray mb-4">
+                        Experience
+                    </h4>
+
+                    <ul class="space-y-3 text-sm">
+
+                        <li class="flex justify-between border-b border-brandDark/5 dark:border-brandCream/5 pb-2">
+                            <span><strong>Personal Projects</strong> · Data Analytics</span>
+                            <span class="text-brandGray">2025 - Present</span>
+                        </li>
+
+                        <li class="flex justify-between border-b border-brandDark/5 dark:border-brandCream/5 pb-2">
+                            <span><strong>Power BI Dashboards</strong> · BI Development</span>
+                            <span class="text-brandGray">2025</span>
+                        </li>
+
+                        <li class="flex justify-between border-b border-brandDark/5 dark:border-brandCream/5 pb-2">
+                            <span><strong>SQL & BigQuery</strong> · Data Engineering Practice</span>
+                            <span class="text-brandGray">2024 - Present</span>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-[10px] font-bold uppercase tracking-widest text-brandGray mb-4">
+                        Skills
+                    </h4>
+
+                    <div class="flex flex-wrap gap-2 text-xs font-medium">
+                        <span class="bg-brandDark/10 dark:bg-brandCream/10 px-3 py-1.5 rounded">SQL</span>
+                        <span class="bg-brandDark/10 dark:bg-brandCream/10 px-3 py-1.5 rounded">Python</span>
+                        <span class="bg-brandDark/10 dark:bg-brandCream/10 px-3 py-1.5 rounded">Power BI</span>
+                        <span class="bg-brandDark/10 dark:bg-brandCream/10 px-3 py-1.5 rounded">BigQuery</span>
+                        <span class="bg-brandDark/10 dark:bg-brandCream/10 px-3 py-1.5 rounded">Excel</span>
+                        <span class="bg-brandDark/10 dark:bg-brandCream/10 px-3 py-1.5 rounded">Pandas</span>
+                        <span class="bg-brandDark/10 dark:bg-brandCream/10 px-3 py-1.5 rounded">Data
+                            Visualization</span>
+                        <span class="bg-brandDark/10 dark:bg-brandCream/10 px-3 py-1.5 rounded">ETL</span>
+                        <span class="bg-brandDark/10 dark:bg-brandCream/10 px-3 py-1.5 rounded">EDA</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="max-w-7xl mx-auto px-6 pt-24 pb-12">
+        <div
+            class="flex justify-between items-baseline border-b border-brandDark/10 dark:border-brandCream/10 pb-4 mb-12">
+            <h2 class="text-xs uppercase tracking-widest text-brandGray font-medium">Get in Touch</h2>
+            <span class="font-display text-4xl text-brandDark/20 dark:text-brandCream/20">Let's Connect</span>
+        </div>
+
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 mb-16">
+
+            ```
+            <div>
+                <a href="mailto:nityanandkhule24@gmail.com"
+                    class="text-2xl md:text-4xl font-medium hover:underline tracking-tight">
+                    nityanandkhule24@gmail.com
+                </a>
+
+                <p class="text-xs text-brandGray mt-2">
+                    Pune, India · Open to Data Analyst, BI Analyst & Data Engineer Opportunities
+                </p>
+            </div>
+
+            <div class="flex flex-wrap gap-4 text-xs font-bold tracking-widest text-brandGray">
+
+                <a href="https://www.linkedin.com/in/nityanand-khule"
+                    class="hover:text-brandDark dark:hover:text-brandCream transition-colors">
+                    LINKEDIN
+                </a>
+
+                <a href="https://github.com/Nityanand-Khule-24"
+                    class="hover:text-brandDark dark:hover:text-brandCream transition-colors">
+                    GITHUB
+                </a>
 
 
 
+                <!-- <a href="YOUR_RESUME_URL" class="hover:text-brandDark dark:hover:text-brandCream transition-colors">
+                    RESUME
+                </a> -->
 
+            </div>
+            ```
 
+        </div>
 
-  <!--
-    - custom js link
-  -->
-  <script src="./assets/js/script.js"></script>
+        <p class="text-[10px] text-brandGray tracking-wider font-medium">
+            © 2026 Nityanand Khule · Data Analytics Portfolio
+        </p>
 
-  <!--
-    - ionicon link
-  -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </footer>
 
+    <script>
+        const cursorDot = document.getElementById('custom-cursor');
+        const cursorText = document.getElementById('custom-cursor-text');
+
+        // Track mouse movement position smoothly
+        window.addEventListener('mousemove', (e) => {
+            const posX = e.clientX;
+            const posY = e.clientY;
+
+            // Update dot element positions
+            cursorDot.style.left = `${posX}px`;
+            cursorDot.style.top = `${posY}px`;
+
+            cursorText.style.left = `${posX}px`;
+            cursorText.style.top = `${posY}px`;
+        });
+
+        // Interactive states for standard buttons & anchors (Scale Up slightly)
+        document.querySelectorAll('a, button').forEach(link => {
+            link.addEventListener('mouseenter', () => {
+                cursorDot.classList.remove('w-3', 'h-3');
+                cursorDot.classList.add('w-8', 'h-8', 'opacity-50');
+            });
+            link.addEventListener('mouseleave', () => {
+                cursorDot.classList.remove('w-8', 'h-8', 'opacity-50');
+                cursorDot.classList.add('w-3', 'h-3');
+            });
+        });
+
+        // Special Morph state for Case Study blocks (Transforms into the "VIEW ↗" Badge)
+        document.querySelectorAll('.custom-hover-target').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                // Hide standard tiny pointer
+                cursorDot.classList.add('opacity-0');
+
+                // Morph text container badge into view
+                cursorText.classList.remove('w-0', 'h-0', 'opacity-0');
+                cursorText.classList.add('w-16', 'h-16', 'opacity-100');
+            });
+
+            card.addEventListener('mouseleave', () => {
+                // Restore standard pointer
+                cursorDot.classList.remove('opacity-0');
+
+                // Hide text container badge
+                cursorText.classList.remove('w-16', 'h-16', 'opacity-100');
+                cursorText.classList.add('w-0', 'h-0', 'opacity-0');
+            });
+        });
+    </script>
 </body>
 
 </html>
